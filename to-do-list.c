@@ -20,9 +20,9 @@ void CreateNewList() {
         return;
     }
     printf("Enter new task: ");
-    getchar(); // để clear bộ nhớ đệm sau scanf
+    getchar(); // để bỏ cái \n sau scanf
     fgets(tasks[taskCount], MAX_LEN, stdin);
-    tasks[taskCount][strcspn(tasks[taskCount], "\n")] = '\0'; // xóa \n
+    tasks[taskCount][strcspn(tasks[taskCount], "\n")] = '\0'; // xóa \n thay bằng \0
     taskCount++;
     printf("Task added!\n");
 }
